@@ -1,10 +1,10 @@
 /* define $ as jQuery just in case */
-(function($) {
+(function ($) {
 	/* doc ready */
-	$(function() {
+	$(function () {
 		var $list = $('.grid');
 		var $items = $list.find('.item');
-		var setHeights = function() {
+		var setHeights = function () {
 			$items.css('height', 'auto');
 			var perRow = Math.floor($list.width() / $items.width());
 			if (perRow == null || perRow < 2) return true;
@@ -12,7 +12,7 @@
 				var maxHeight = 0,
 					$row = $items.slice(i, i + perRow);
 
-				$row.each(function() {
+				$row.each(function () {
 					var itemHeight = parseInt($(this).outerHeight());
 					if (itemHeight > maxHeight) maxHeight = itemHeight;
 				});
